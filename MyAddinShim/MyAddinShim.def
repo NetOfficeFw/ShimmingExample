@@ -1,0 +1,9 @@
+; MyAddinShim.def : Declares the module parameters.
+
+LIBRARY      "MyAddinShim.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

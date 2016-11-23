@@ -1,0 +1,49 @@
+HKCR
+{
+	MyAddin.Addin = s 'Connect Class'
+	{
+		CLSID = s '{f80f0380-51df-4e63-b64b-7403993f0509}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove '{f80f0380-51df-4e63-b64b-7403993f0509}' = s 'MyAddin.Addin'
+		{
+			ProgID = s 'MyAddin.Addin'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			Programmable
+		}
+	}
+}
+
+HKCU
+{
+	NoRemove Software
+	{
+		NoRemove Microsoft
+		{
+			NoRemove Office
+			{
+				NoRemove Excel
+				{
+					NoRemove Addins
+					{
+						ForceRemove MyAddin.Addin
+						{
+							val 'Description' = s 'Description for MyAddin.Addin'
+							val 'FriendlyName' = s 'MyAddin.Addin Friendly Name'
+							val 'LoadBehavior' = d 3
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
