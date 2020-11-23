@@ -5,4 +5,5 @@
 
 ## License
 
-Copyright (c) 2016 Sebastian Lange
+Licensed under [MIT License](LICENSE.txt).  
+Copyright © 2016 Sebastian Lange
